@@ -15,7 +15,7 @@ import java.net.HttpURLConnection;
 import java.util.List;
 
 /**
- * Created by BIT on 2017-01-16. 01047467587
+ * Created by BIT on 2017-01-16.
  */
 
 public class UserService {
