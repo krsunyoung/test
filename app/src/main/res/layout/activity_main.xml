@@ -99,6 +99,16 @@
                 android:layout_marginTop="22dp"
                 android:text="버튼" />
 
+            <Button
+                android:id="@+id/search_test"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="66dp"
+                android:text="전버튼" />
+
 
         </RelativeLayout>
         <!-- 57행부터 79행을 제외한 나머지는 다 복사해서 자신의 xml에 붙여넣으세요 -->

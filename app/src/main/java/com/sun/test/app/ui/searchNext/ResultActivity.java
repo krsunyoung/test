@@ -4,9 +4,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.sun.test.R;
 
@@ -28,6 +31,25 @@ public class ResultActivity extends AppCompatActivity {
     // ArrayList for Listview
     ArrayList<HashMap<String, String>> productList;
 
+
+
+    //시작**************
+    // 액션바 맨 오른쪽 돋보기 추가 (170123/상욱추가)
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main, menu);
+
+        return true;
+    }
+
+    // 돋보기 눌렀을때 효과... (170123/상욱추가)
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // 이곳에 돋보기 눌렀을때 검색액티비티로 이동할 코드 구현!!!
+        Toast.makeText(this, "오오오됐어~", Toast.LENGTH_SHORT).show();
+        return super.onOptionsItemSelected(item);
+    }
+    //끝 ********************
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

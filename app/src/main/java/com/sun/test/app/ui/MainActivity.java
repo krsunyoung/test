@@ -18,6 +18,7 @@ import com.sun.test.R;
 import com.sun.test.app.ui.Search.SearchActivity;
 import com.sun.test.app.ui.User.UsersListActivity;
 import com.sun.test.app.ui.searchNext.ResultActivity;
+import com.sun.test.app.ui.searchNext.testActivity;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -68,6 +69,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             }
         });
+        findViewById(R.id.search_test).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, testActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+
     }
     public void onSerchImageClicked(View view){
         onSearchRequested();
@@ -84,7 +95,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             super.onBackPressed();
         }
     }
-
+    //시작**************
     // 액션바 맨 오른쪽 돋보기 추가 (170123/상욱추가)
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -100,6 +111,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Toast.makeText(this, "오오오됐어~", Toast.LENGTH_SHORT).show();
         return super.onOptionsItemSelected(item);
     }
+    //끝 ********************
 
     // 네비게이션 (170123/상욱추가)
     @SuppressWarnings("StatementWithEmptyBody")
