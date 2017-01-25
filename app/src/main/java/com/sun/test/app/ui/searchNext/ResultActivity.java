@@ -64,30 +64,30 @@ public class ResultActivity extends AppCompatActivity {
         lv = (ListView) findViewById(R.id.list_view);
         inputSearch = (EditText) findViewById(R.id.inputSearch);
 
-        // Adding items to listview
-        adapter = new ArrayAdapter<String>(this, R.layout.list_item, R.id.product_name, products);
-        lv.setAdapter(adapter);
+            // Adding items to listview
+            adapter = new ArrayAdapter<String>(this, R.layout.list_item, R.id.product_name, products);
+            lv.setAdapter(adapter);
 
-        inputSearch.addTextChangedListener(new TextWatcher() {
+            inputSearch.addTextChangedListener(new TextWatcher() {
 
-            @Override
-            public void onTextChanged(CharSequence cs, int arg1, int arg2, int arg3) {
-                // When user changed the Text
-                ResultActivity.this.adapter.getFilter().filter(cs);
-            }
+                @Override
+                public void onTextChanged(CharSequence cs, int arg1, int arg2, int arg3) {
+                    // When user changed the Text
+                    ResultActivity.this.adapter.getFilter().filter(cs);
+                }
 
-            @Override
-            public void beforeTextChanged(CharSequence arg0, int arg1, int arg2,
-                                          int arg3) {
-                // TODO Auto-generated method stub
+                @Override
+                public void beforeTextChanged(CharSequence arg0, int arg1, int arg2,
+                                              int arg3) {
+                    // TODO Auto-generated method stub
 
-            }
+                }
 
-            @Override
-            public void afterTextChanged(Editable arg0) {
-                // TODO Auto-generated method stub
-            }
-        });
+                @Override
+                public void afterTextChanged(Editable arg0) {
+                    // TODO Auto-generated method stub
+                }
+            });
     }
 
 }
